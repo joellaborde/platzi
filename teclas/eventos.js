@@ -6,7 +6,7 @@ var teclas = {
 };
 
 function dibujarLinea(color, xinicial, yinicial, xfinal, yfinal, lienzo)
-{
+{ 
   lienzo.beginPath();
   lienzo.strokeStyle = color;
   lienzo.lineWidth = 3;

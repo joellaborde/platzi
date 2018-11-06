@@ -1,34 +1,26 @@
-
-
 var vp = document.getElementById("villaplatzi");
 var papel = vp.getContext("2d");
 
 var fondo = {
-  url: "fondo.pgn",
+  url: "tile.pgn",
   cargaOK: false
-};
-
+}
 var vaca = {
   url: "vaca.png",
   cargaOK: false
 };
-
 var cerdo = {
   url: "cerdo.png",
   cargaOK: false
-};
-
-var pollo = {
+}
+var pollo ={
   url: "pollo.png",
   cargaOk: false
-};
-
+}
 
 var cantidad = aleatorio(5, 25);
 
-
 fondo.imagen = new Image();
-console.log(fondo.url);
 fondo.imagen.src = fondo.url;
 fondo.imagen.addEventListener("load", cargarFondo);
 
@@ -64,66 +56,49 @@ function cargarPollos(){
   dibujar();
 }
 
-
 function dibujar()
 {
-
-  console.log('dibujar');
-  console.log(fondo);
-
   if (fondo.cargaOK)
   {
-    console.log(fondo.imagen.url)
     papel.drawImage(fondo.imagen, 0, 0);
   }
-
   if (vaca.cargaOK)
   {
     console.log(cantidad);
-
-    for(var v = 0; v < cantidad; v++)
+    for(var v=0; v < cantidad; v++)
     {
       var x = aleatorio(0, 5);
       var y = aleatorio(0, 5);
-      var x = x * 60;
-      var y = y * 60;
-
-      papel.drawImage(vaca.imagen, x, y);
+      var x * 60;
+      var y * 60;
+      papel.drawImage(vaca.imagen, x, y)
      }
    }
-
-
    if (cerdo.cargaOK)
    {
      console.log(cantidad);
-
-     for(var v = 0; v < cantidad; v++)
+     for(var v=0; v < cantidad; v++)
      {
        var x = aleatorio(0, 6);
        var y = aleatorio(0, 6);
-       var x = x * 70;
-       var y = y * 70;
-
+       var x * 70;
+       var y * 70;
        papel.drawImage(cerdo.imagen, x, y)
       }
     }
-
     if (pollo.cargaOK)
     {
       console.log(cantidad);
-
-      for(var v = 0; v < cantidad; v++)
+      for(var v=0; v < cantidad; v++)
       {
         var x = aleatorio(0, 5);
         var y = aleatorio(0, 5);
-        var x = x * 80;
-        var y = y * 80;
-
-        papel.drawImage(pollo.imagen, x, y);
-       }
-     }
-}
-
+        var x * 80;
+        var y * 80;
+        papel.drawImage(pollo.imagen, x, y)
+      }
+    }
+  }
 function aleatorio(min, maxi)
 {
   var resultado;
